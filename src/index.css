@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Geist", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer utilities {
+  /* Bio-Technical Glassmorphism */
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.01);
+  }
+
+  /* Neon Outer Glows */
+  .glow-green {
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.25), inset 0 0 10px rgba(57, 255, 20, 0.1);
+  }
+  
+  .glow-green-hover:hover {
+    box-shadow: 0 0 35px rgba(57, 255, 20, 0.45), inset 0 0 15px rgba(57, 255, 20, 0.2);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 25px rgba(0, 220, 230, 0.25), inset 0 0 10px rgba(0, 220, 230, 0.1);
+  }
+  
+  .glow-cyan-hover:hover {
+    box-shadow: 0 0 35px rgba(0, 220, 230, 0.45), inset 0 0 15px rgba(0, 220, 230, 0.2);
+  }
+
+  /* Custom Grid Pattern for lab vibe */
+  .bg-lab-grid {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+/* Custom styles for range slider to ensure it is beautiful, futuristic, and highly visible */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #39ff14;
+  cursor: pointer;
+  margin-top: -8px;
+  box-shadow: 0 0 12px #39ff14;
+  border: 2px solid #ffffff;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.3);
+}

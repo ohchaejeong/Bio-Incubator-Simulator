@@ -1,0 +1,6 @@
+{
+  "name": "Bio-Incubator Simulator",
+  "description": "A real-time biotechnology simulation app simulating microbial growth in a petri dish with configurable parameters like temperature, pH, nutrients, and oxygen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
